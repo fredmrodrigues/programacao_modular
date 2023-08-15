@@ -19,8 +19,9 @@ public class Aplicacao09 {
         boolean dataValida = verificarData(data);
 
         if (dataValida) {
-            int dia = Integer.parseInt(data.substring(0, 2));
-            int mes = Integer.parseInt(data.substring(3, 5));
+            //convertendo a subString em inteiros
+            int dia = Integer.parseInt(data.substring(0, 2)); // Pega os dois primeiros dígitos da data e converte para inteiro (dia)
+            int mes = Integer.parseInt(data.substring(3, 5)); // Pega os dois últimos dígitos da data e converte para inteiro (mês)
 
             int diaDaSemana = calcularDiaDaSemana(dia, mes);
 
