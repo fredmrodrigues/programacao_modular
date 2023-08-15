@@ -1,6 +1,6 @@
 /*
 ==================================================ENUNCIADO============================================================
-10. Refaça o exercício 02, sendo que os dados serão lidos de um arquivo texto. O arquivo texto pode ter várias linhas e
+110. Refaça o exercício 02, sendo que os dados serão lidos de um arquivo texto. O arquivo texto pode ter várias linhas e
 cada linha representa um vetor a ser utilizado pelo método. O separador usado é ponto e vírgula. Por exemplo:
 4;8;15;4;15;16;23;42
 7;11;13;17;29;23;29;31
