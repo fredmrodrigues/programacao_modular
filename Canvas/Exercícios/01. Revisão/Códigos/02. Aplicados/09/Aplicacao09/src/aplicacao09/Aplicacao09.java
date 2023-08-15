@@ -10,31 +10,6 @@ import java.util.Scanner;
 
 public class Aplicacao09 {
 
-    public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-
-        System.out.print("Digite uma data no formato DD/MM: ");
-        String data = input.nextLine();
-
-        boolean dataValida = verificarData(data);
-
-        if (dataValida) {
-            //convertendo a subString em inteiros
-            int dia = Integer.parseInt(data.substring(0, 2)); // Pega os dois primeiros dígitos da data e converte para inteiro (dia)
-            int mes = Integer.parseInt(data.substring(3, 5)); // Pega os dois últimos dígitos da data e converte para inteiro (mês)
-
-            int diaDaSemana = calcularDiaDaSemana(dia, mes);
-
-            String nomeDiaDaSemana = obterNomeDiaDaSemana(diaDaSemana);
-
-            System.out.println("Em 2024, a data " + data + " cairá em um(a) " + nomeDiaDaSemana + ".");
-        } else {
-            System.out.println("Data inválida.");
-        }
-
-        input.close();
-    }
-
     public static boolean verificarData(String data) {
         if (data.matches("\\d{2}/\\d{2}")) {
             int dia = Integer.parseInt(data.substring(0, 2));
@@ -82,5 +57,30 @@ public class Aplicacao09 {
     public static String obterNomeDiaDaSemana(int diaDaSemana) {
         String[] diasDaSemana = {"Segunda-feira", "Terça-feira", "Quarta-feira", "Quinta-feira", "Sexta-feira", "Sábado", "Domingo"};
         return diasDaSemana[diaDaSemana];
+    }
+    
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Digite uma data no formato DD/MM: ");
+        String data = input.nextLine();
+
+        boolean dataValida = verificarData(data);
+
+        if (dataValida) {
+            //convertendo a subString em inteiros
+            int dia = Integer.parseInt(data.substring(0, 2)); // Pega os dois primeiros dígitos da data e converte para inteiro (dia)
+            int mes = Integer.parseInt(data.substring(3, 5)); // Pega os dois últimos dígitos da data e converte para inteiro (mês)
+
+            int diaDaSemana = calcularDiaDaSemana(dia, mes);
+
+            String nomeDiaDaSemana = obterNomeDiaDaSemana(diaDaSemana);
+
+            System.out.println("Em 2024, a data " + data + " cairá em um(a) " + nomeDiaDaSemana + ".");
+        } else {
+            System.out.println("Data inválida.");
+        }
+
+        input.close();
     }
 }
