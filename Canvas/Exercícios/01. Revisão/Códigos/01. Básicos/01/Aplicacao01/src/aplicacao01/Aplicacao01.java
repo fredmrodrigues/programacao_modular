@@ -6,10 +6,9 @@ após a execução. Escreva um programa que verifique a correção do seu códig
 =======================================================================================================================
 */
 package aplicacao01;
-/**
- * @author fredericorodrigues
- */
+
 import java.util.Scanner;
+
 public class Aplicacao01 {
     
     public static void main(String[] args) {
