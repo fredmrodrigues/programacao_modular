@@ -12,6 +12,16 @@ import java.util.Scanner;
 
 public class Aplicacao07 {
 
+    //método para fazer a multiplicação por 11 através do algoritmo dado
+    public static int multiplicarPor11(int numero) {
+        int digito1 = numero / 10; // Primeiro dígito
+        int digito2 = numero % 10; // Segundo dígito
+
+        int resultado = (digito1 * 100) + (digito1 + digito2) * 10 + digito2;
+
+        return resultado;
+    }
+    
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
@@ -32,14 +42,5 @@ public class Aplicacao07 {
         }
 
         input.close();
-    }
-
-    public static int multiplicarPor11(int numero) {
-        int digito1 = numero / 10; // Primeiro dígito
-        int digito2 = numero % 10; // Segundo dígito
-
-        int resultado = (digito1 * 100) + (digito1 + digito2) * 10 + digito2;
-
-        return resultado;
     }
 }
